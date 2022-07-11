@@ -1,0 +1,62 @@
+{
+  "validationSchema": null,
+  "initialValue": {},
+  "formSchema": {
+    "containerPage": {
+      "sx": {
+        "padding": 2
+      },
+      "header": {
+        "flex": "row",
+        "sx": {
+          "display": "flex",
+          "justifyContent": "space-between",
+          "width": "100%"
+        },
+        "title": {
+          "component": "text",
+          "label": "User Management",
+          "onlyDisplay": true
+        },
+        "create": {
+          "component": "button",
+          "label": "Create",
+          "onlyDisplay": true,
+          "onClickFn": "createItem"
+        }
+      },
+      "table": {
+        "component": "table",
+        "onlyDisplay": true,
+        "title": "Users",
+        "actions": ["addUser"],
+        "loadDataFn": "fetchUsers",
+        "afterLoadDataFn": "afterFetchUsers",
+        "optionsFn": "getTableOptions",
+        "refreshIf": "triggerRefresh",
+        "localization": {
+          "toolbar": { "searchPlaceholder": "Search email" }
+        },
+        "columns": [
+          {
+            "title": "Name",
+            "field": "name",
+            "renderFn": "renderName"
+          },
+          {
+            "title": "Email",
+            "dataField": "email"
+          },
+          {
+            "title": "PhoneNumber",
+            "field": "phone"
+          },
+          {
+            "title": "Country",
+            "field": "country"
+          }
+        ]
+      }
+    }
+  }
+}
