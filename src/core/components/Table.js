@@ -26,6 +26,7 @@ function buildTableColumns(columns, formikContext) {
         color: '#637381',
         fontWeight: 'bold',
         height: 50,
+        backgroundImage: 'linear-gradient(center top , #F8F8F8, #ECECEC)',
         ...col.headerStyle
       },
       width: col.width,
@@ -115,9 +116,7 @@ export default function Table(props) {
         },
         '& .MuiTable-root': {
           '& .MuiTableRow-root': {
-            borderRadius: 4,
             backgroundColor: '#fff',
-            border: '1px solid #f0f0f0',
           },
           '& .MuiTableCell-root': {
             border: 0,
@@ -126,6 +125,9 @@ export default function Table(props) {
           '& .MuiTableFooter-root tr td div:nth-child(1)': {
             justifyContent: 'center',
             flex: 'initial',
+          },
+          '& tbody.MuiTableBody-root >:nth-of-type(2n)': {
+            backgroundColor: '#fafafa',
           },
         }
       }}

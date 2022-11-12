@@ -4,12 +4,14 @@ import Button from "../components/Button";
 import Text from "../components/Text";
 import IconButton from "../components/IconButton";
 import Table from "../components/Table";
+import ContentDialog from "../components/ContentDialog";
 
 export let CustomComponents = {
   button: Button,
   iconButton: IconButton,
   text: Text,
   table: Table,
+  contentDialog: ContentDialog,
 };
 
 export function getCustomComponent(name) {

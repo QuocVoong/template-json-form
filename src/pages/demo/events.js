@@ -35,9 +35,7 @@ const addUser = (formikContext) => ({
   tooltip: 'Add User',
   isFreeAction: true,
   onClick: (event, rowData) => {
-    console.log('formikContext ', formikContext);
-    console.log('rowData ', rowData);
-    formikContext.setFieldValue("triggerRefresh", now());
+    formikContext.setFieldValue('openCreatingDialog', true);
   }
 })
 

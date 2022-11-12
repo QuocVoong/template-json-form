@@ -1,5 +1,6 @@
 import React from 'react';
-import schema from './schema.json';
+
+
 import { FormFieldRenderer } from "../../core/dynamic/FormFieldRenderer";
 import { Form, Formik } from "formik";
 import { registerEventHandlers } from "../../core/registers/events.registry";
